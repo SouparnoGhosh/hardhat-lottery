@@ -44,6 +44,7 @@
   },
   "scripts": {
     "test": "yarn hardhat test",
+    "build": "yarn hardhat clean && hardhat compile",
     "test-staging": "yarn hardhat test --network rinkeby",
     "lint": "yarn solhint 'contracts/*.sol'",
     "lint:fix": "yarn solhint 'contracts/**/*.sol' --fix",
