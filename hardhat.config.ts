@@ -1,3 +1,4 @@
+/* eslint-disable node/no-unpublished-import */
 import * as dotenv from "dotenv";
 
 import { HardhatUserConfig } from "hardhat/config";
@@ -7,6 +8,7 @@ import "@typechain/hardhat";
 import "hardhat-gas-reporter";
 import "solidity-coverage";
 import "hardhat-deploy";
+import "hardhat-contract-sizer";
 
 import path from "path";
 dotenv.config({ path: path.join(__dirname, "/.env.local") });
