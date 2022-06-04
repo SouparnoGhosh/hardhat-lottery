@@ -17,7 +17,7 @@ dotenv.config();
 
 const config: HardhatUserConfig = {
   solidity: "0.8.6",
-  namedAccounts: { deployer: { default: 0 } },
+  namedAccounts: { deployer: { default: 0 }, player: { default: 1 } },
   networks: {
     rinkeby: {
       url: process.env.RINKEBY_URL || "",
