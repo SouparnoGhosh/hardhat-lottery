@@ -8,14 +8,15 @@ const func: DeployFunction = async function (hre: HardhatRuntimeEnvironment) {
 
   const { deployer } = await getNamedAccounts();
 
-  await deploy("EtherWallet", {
+  await deploy("Raffle", {
     // <-- name of the deployment
-    contract: "EtherWallet", // <-- name of the contract/artifact(more specifically) to deploy
+    contract: "Raffle", // <-- name of the contract/artifact(more specifically) to deploy
     from: deployer, // <-- account to deploy from
     args: [], // <-- contract constructor arguments. Here it has nothing
     log: true, // <-- log the address and gas used in the console
+    waitConfirmations: 6,
   });
 };
 
 export default func;
-func.tags = ["EtherWallet"];
+func.tags = ["raffle"];

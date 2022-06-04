@@ -18,8 +18,13 @@ dotenv.config();
 const config: HardhatUserConfig = {
   solidity: "0.8.6",
   namedAccounts: { deployer: { default: 0 }, player: { default: 1 } },
+  defaultNetwork: "hardhat",
   networks: {
+    hardhat: {
+      chainId: 31337,
+    },
     rinkeby: {
+      chainId: 4,
       url: process.env.RINKEBY_URL || "",
       accounts:
         process.env.PRIVATE_KEY !== undefined ? [process.env.PRIVATE_KEY] : [],
