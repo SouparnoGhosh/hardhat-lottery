@@ -6,7 +6,7 @@ export interface networkConfigItem {
   name?: string;
   subscriptionId?: string;
   gasLane?: string;
-  keepersUpdateInterval?: string;
+  interval?: string;
   entranceFee?: any;
   callbackGasLimit?: string;
   vrfCoordinatorV2?: string;
@@ -24,11 +24,14 @@ export const networkConfig: networkConfigInfo = {
       "0xd89b2bf150e3b9e13446986e571fb9cab24b13cea0a43ea20a6049a85cc807cc",
     entranceFee: ethers.utils.parseEther("0.01"),
     subscriptionId: "0",
+    callbackGasLimit: "500000",
+    interval: "30",
   },
   31337: {
     name: "localhost",
     gasLane:
       "0xd89b2bf150e3b9e13446986e571fb9cab24b13cea0a43ea20a6049a85cc807cc",
+    interval: "30",
   },
 };
 
