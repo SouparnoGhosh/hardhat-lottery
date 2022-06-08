@@ -12,6 +12,7 @@ const deployMocks: DeployFunction = async function (
   const { deploy, log } = deployments;
   const { deployer } = await getNamedAccounts();
   const chainId = network.config.chainId;
+  const constructorArguments = [BASE_FEE, GAS_PRICE_LINK];
 
   if (chainId === 31337) {
     log("----------------------------------");
@@ -22,7 +23,7 @@ const deployMocks: DeployFunction = async function (
     await deploy("VRFCoordinatorV2Mock", {
       from: deployer,
       log: true,
-      args: [BASE_FEE, GAS_PRICE_LINK],
+      args: constructorArguments,
     });
 
     // Additional Info

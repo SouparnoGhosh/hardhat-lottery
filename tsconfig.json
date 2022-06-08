@@ -14,8 +14,9 @@
     "hardhat.config.ts",
     "./scripts",
     "./deploy",
+    "./deploy-helpers",
     "./test",
     "./typechain"
   ],
-  "files": ["./hardhat.config.ts"]
+  "files": ["./hardhat.config.ts", "./helper-hardhat-config.ts"]
 }
