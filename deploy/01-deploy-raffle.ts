@@ -69,6 +69,13 @@ const deployRaffle: DeployFunction = async function (
     log("Verifying...");
     await verify(raffle.address, args);
   }
+
+  // Pricefeed
+  log("----------------------------------------------------");
+  log("Run Price Feed contract with command:");
+  const networkName = network.name === "hardhat" ? "localhost" : network.name;
+  log(`yarn hardhat run scripts/enterRaffle.js --network ${networkName}`);
+  log("----------------------------------------------------");
 };
 
 export default deployRaffle;
