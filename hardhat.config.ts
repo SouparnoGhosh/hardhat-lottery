@@ -28,6 +28,8 @@ const config: HardhatUserConfig = {
       url: process.env.RINKEBY_URL || "",
       accounts:
         process.env.PRIVATE_KEY !== undefined ? [process.env.PRIVATE_KEY] : [],
+      gas: 2100000,
+      gasPrice: 8000000000,
     },
   },
   gasReporter: {
@@ -36,6 +38,10 @@ const config: HardhatUserConfig = {
   },
   etherscan: {
     apiKey: process.env.ETHERSCAN_API_KEY,
+  },
+
+  mocha: {
+    timeout: 120000,
   },
 };
 
